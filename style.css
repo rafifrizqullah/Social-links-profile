@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+:root {
+  --primary: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: var(--off-black);
+  height: 100vh;
+  /* word-wrap: break-word; */
+}
+
+main {
+  position: relative;
+  height: 100%;
+}
+
+p {
+  font-size: 14px;
+}
+
+.card {
+  width: 325px;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--dark-grey);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.card-centered {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card h5 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.card h6 {
+  font-size: .9rem;
+  color: var(--primary);
+  margin-top: .875rem;
+}
+
+.card p {
+  margin-top: 2rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 90px;
+}
+
+.btn-container {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.btn-container a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.btn {
+  background-color: var(--grey);
+  border-radius: .5rem;
+  padding: .75rem 1rem;
+}
+
+.btn:hover {
+  background-color: var(--primary);
+  color: var(--off-black);
+  font-weight: 600;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* attribution styling */
+.attribution {
+  color: var(--white);
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    overflow: auto;
+  }
+  .card {
+    width: 86%;
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
