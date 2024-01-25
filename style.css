@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
 @font-face {
   font-family: "Inter";
   src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
@@ -34,13 +32,12 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   background-color: var(--off-black);
-  height: 100vh;
-  /* word-wrap: break-word; */
-}
-
-main {
-  position: relative;
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 p {
@@ -54,14 +51,6 @@ p {
   background-color: var(--dark-grey);
   padding: 1.5rem;
   border-radius: 1rem;
-}
-
-.card-centered {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .card h5 {
@@ -127,15 +116,10 @@ footer {
 }
 
 @media screen and (max-width: 375px) {
-  main {
-    overflow: auto;
-  }
   .card {
-    width: 86%;
+    width: 100%;
   }
-
-  .btn-container {
-    display: flex;
-    flex-direction: column;
+  .btn {
+    font-size: .75rem;
   }
 }
